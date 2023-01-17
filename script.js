@@ -19,3 +19,16 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! ${computerSelection} beats ${playerSelection}`;
     }
 }
+
+function checkInput(userString) {
+    let check = userString.toLowerCase();
+    if (check === `rock` || check === `paper` || check === `scissors`) {
+        return check;
+    }
+}
+
+function modifyInput(modString) {
+    let result = modString.charAt(0).toUpperCase() + modString.slice(1);
+    return result;
+}
+
