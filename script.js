@@ -24,6 +24,8 @@ function checkInput(userString) {
     let check = userString.toLowerCase();
     if (check === `rock` || check === `paper` || check === `scissors`) {
         return check;
+    } else {
+        alert(`Wrong input! Reload this page and try again`);
     }
 }
 
@@ -31,4 +33,33 @@ function modifyInput(modString) {
     let result = modString.charAt(0).toUpperCase() + modString.slice(1);
     return result;
 }
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        let userChoice = prompt(`Write your selection`);
+        let x = modifyInput(checkInput(userChoice));
+        let allScore = playRound(x);
+        if (allScore.includes(`win`)) {
+            playerScore += 1;
+            alert(allScore + `\nYour score: ${playerScore} Computer score: ${computerScore}`);
+        } else if (allScore.includes(`lose`)) {
+            computerScore += 1;
+            alert(allScore + `\nYour score: ${playerScore} Computer score: ${computerScore}`);
+        } else {
+            alert(allScore + `\nYour score: ${playerScore} Computer score: ${computerScore}`);
+        }
+    }
+
+    if (playerScore > computerScore) {
+        alert(`Congratulations! You win the game! Reload this page and try again`);
+    } else if (playerScore < computerScore) {
+        alert(`You lose the game! Don't Worry! Reload this page and try again`);
+    } else {
+        alert(`It's a tie! You can win the game! Reload this page and try again`);
+    }
+}
+
+game();
 
