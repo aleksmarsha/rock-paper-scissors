@@ -20,20 +20,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function checkInput(userString) {
-    let check = userString.toLowerCase();
-    if (check === `rock` || check === `paper` || check === `scissors`) {
-        return check;
-    } else {
-        alert(`Wrong input! Reload this page and try again`);
-    }
-}
-
-function modifyInput(modString) {
-    let result = modString.charAt(0).toUpperCase() + modString.slice(1);
-    return result;
-}
-
 function game() {
     let playerScore = 0;
     let computerScore = 0;
@@ -60,6 +46,3 @@ function game() {
         alert(`It's a tie! You can win the game! Reload this page and try again`);
     }
 }
-
-/* game(); */
-

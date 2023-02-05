@@ -1,5 +1,6 @@
 body {
-    background-color: #F9CAD7;
+    background-color: #F4CFDF;
+    margin: 0px;
 }
 
 h1 {
@@ -8,4 +9,45 @@ h1 {
     font-size: 36px;
     color: #342B4A;
     text-shadow: 1px 1px 1px #A57283;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.names {
+    font-size: 34px;
+    font-weight: 700;
+    color: #342B4A;
+}
+
+.main button {
+    background-color: #F7F6CF;
+    margin: 5px;
+    padding: 5px;
+    min-width: 100px;
+    border: 2px solid #B6D8F2;
+    border-radius: 5px;
+}
+
+.main button:hover {
+    border: 2px solid #5784BA;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+img {
+    height: auto;
+    max-width: 180px;
+}
+
+.main div {
+    display: flex;
+    flex-direction: column;
 }
