@@ -1,11 +1,11 @@
 function getComputerChoice() {
     let artificialChoice = Math.floor(Math.random() * 3);
     if (artificialChoice===0) {
-        return `Rock`;
+        return `rock`;
     } else if (artificialChoice===1) {
-        return `Paper`;
+        return `paper`;
     } else {
-        return `Scissors`;
+        return `scissors`;
     }
 }
 
@@ -23,9 +23,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        let userChoice = prompt(`Write your selection`);
-        let x = modifyInput(checkInput(userChoice));
+    for (let i = 0; i < 5; i++) {    
         let allScore = playRound(x);
         if (allScore.includes(`win`)) {
             playerScore += 1;
@@ -46,3 +44,10 @@ function game() {
         alert(`It's a tie! You can win the game! Reload this page and try again`);
     }
 }
+
+const firstScore = 0;
+const secondScore = 0;
+document.getElementById('playerScore').textContent = firstScore;
+document.getElementById('aiScore').textContent = secondScore;
+
+
