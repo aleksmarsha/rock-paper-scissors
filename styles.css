@@ -32,6 +32,10 @@ h1 {
     border: 2px solid #B6D8F2;
     font-weight: 700;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main button:hover {
@@ -39,7 +43,7 @@ h1 {
 }
 
 .main button:active {
-    border: 3px solid #5784BA;
+    border: 2px solid #5784BA;
 }
 
 .main {
@@ -71,10 +75,19 @@ h1 {
 }
 
 #restart:active {
-    border: 3px solid #8C7386;
+    border: 2px solid #8C7386;
 }
 
 .play {
     display: flex;
     justify-content: center;
+}
+
+img {
+    height: auto;
+    max-width: 70px;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }

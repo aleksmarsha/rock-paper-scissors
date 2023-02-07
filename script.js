@@ -21,15 +21,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {    
+    while(firstScore <= 5 && secondScore <= 5) {    
         let allScore = playRound(x);
         if (allScore.includes(`win`)) {
-            playerScore += 1;
+            firstScore += 1;
             alert(allScore + `\nYour score: ${playerScore} Computer score: ${computerScore}`);
         } else if (allScore.includes(`lose`)) {
-            computerScore += 1;
+            secondScore += 1;
             alert(allScore + `\nYour score: ${playerScore} Computer score: ${computerScore}`);
         } else {
             alert(allScore + `\nYour score: ${playerScore} Computer score: ${computerScore}`);
@@ -45,9 +43,21 @@ function game() {
     }
 }
 
-const firstScore = 0;
-const secondScore = 0;
+let firstScore = 0;
+let secondScore = 0;
+
 document.getElementById('playerScore').textContent = firstScore;
 document.getElementById('aiScore').textContent = secondScore;
 
+let button = document.querySelectorAll('button');
+button.forEach(btn => {
+    let id = btn.getAttribute('id');
+btn.addEventListener('click', () => {
+    if (id === 'restart') {
+
+    } else {
+        
+    }
+    });
+});
 
