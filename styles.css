@@ -13,7 +13,7 @@ h1 {
 
 .score {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
@@ -90,4 +90,10 @@ img {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+
+#result {
+    text-align: center;
+    font-size: 30px;
+    max-width: 300px;
 }
