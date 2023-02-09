@@ -16,11 +16,11 @@ function playRound(playerSelection, computerSelection) {
 	 document.querySelector('b').style.color = '#7C98AB';
 	 return 'tie';
     } else if ((playerSelection==='rock' && computerSelection==='scissors') || (playerSelection==='paper' && computerSelection==='rock') || (playerSelection==='scissors' && computerSelection==='paper')) {
-         document.getElementById('result').innerHTML = `You <b>WIN</b> this round! ${playerSelection.toUpperCase()} vs ${computerSelection.toUpperCase()}`;
+     document.getElementById('result').innerHTML = `You <b>WIN</b> this round! ${playerSelection.toUpperCase()} vs ${computerSelection.toUpperCase()}`;
 	 document.querySelector('b').style.color = '#218B82';
          return 'win';
     } else {
-         document.getElementById('result').innerHTML = `You <b>LOSE</b> this round! ${playerSelection.toUpperCase()} vs ${computerSelection.toUpperCase()}`;
+     document.getElementById('result').innerHTML = `You <b>LOSE</b> this round! ${playerSelection.toUpperCase()} vs ${computerSelection.toUpperCase()}`;
 	 document.querySelector('b').style.color = '#C54B6C';
          return 'lose';
     }
@@ -41,10 +41,11 @@ function game(choose) {
    if(firstScore === 5 || secondScore === 5) {
     if (firstScore > secondScore) {
 	 document.getElementById('first').style.color = '#218B82';
-	 document.getElementById('result').textContent = 'YOU WIN THE GAME!';
+	 document.getElementById('result').innerHTML += '<p style="color:#218B82">YOU WIN THE GAME!</p>';
+
     } else if (firstScore < secondScore) {
 	 document.getElementById('second').style.color = '#C54B6C';
-	 document.getElementById('result').textContent = 'YOU LOSE THE GAME!';
+	 document.getElementById('result').innerHTML += '<p style="color:#C54B6C">YOU LOSE THE GAME!</p>';
   } else {
 
     }

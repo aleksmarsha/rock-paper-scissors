@@ -15,17 +15,22 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
+    margin: 0px;
 }
 
 .names {
+    display: flex;
+    flex-direction: column;
     font-size: 40px;
     font-weight: 700;
+    width: 100px;;
+    align-items: center;
     color: #342B4A;
 }
 
 .main button {
     background-color: #F7F6CF;
-    margin: 5px;
+    margin: 0px;
     padding: 5px;
     min-height: 100px;
     min-width: 100px;
@@ -65,7 +70,7 @@ h1 {
     color: #F5F3E7;
     border: 2px solid #DC828F;
     font-size: 36px;
-    margin-top: 40px;
+    margin-top: 10px;
     font-weight: 700;
     border-radius: 50%;
 }
@@ -95,5 +100,10 @@ img {
 #result {
     text-align: center;
     font-size: 30px;
-    max-width: 300px;
+    height: 150px;
+    width: 300px;
+}
+
+p {
+    margin: 0px;
 }
